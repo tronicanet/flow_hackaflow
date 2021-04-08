@@ -69,7 +69,7 @@ app.use(errorHandler.ServerErrorHandler);
  */
 
 // Ponemos a escuchar la aplicacion en el puerto 3000
-const port = 443;
+const port = 8080;
 const server = app.listen(port, () => {
   let serverStart = 'Server running http://' + os.hostname() + ':' + server.address().port;
   console.log(serverStart);
