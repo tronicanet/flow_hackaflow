@@ -14,6 +14,9 @@ const error = require('./lib/helper/error');
 // Importamos el middleware que maneja los errores
 const errorHandler = require('./lib/middleware/error');
 
+// Importamos CORS
+const corsService = require('./lib/service/cors');
+
 // Importo el endpoint token
 const apiRoutes = require('./lib/routes/apiRoutes');
 
@@ -24,10 +27,12 @@ const apiRoutes = require('./lib/routes/apiRoutes');
 
 // Creo la instancia de la aplicacion
 const app = express();
-
 /* 
  * Middlewares
  */
+
+// Seteamos CORS
+app.use(corsService.initCORS());
 
 
 // Seteamos bodyParser
