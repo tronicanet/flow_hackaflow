@@ -4,7 +4,7 @@
   "description": "Api Backend HackaFlow",
   "main": "index.js",
   "scripts": {
-    "start": "node start",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "HackaFlow Team 1",
