@@ -6,7 +6,7 @@
 process.on('warning', e => console.warn(e.stack));
 
 // Obtenemos la congfig
-require('dotenv').config({ debug: process.env.DEBUG });
+if (process.env.NODE_ENV !== 'production') require('dotenv').config({ debug: process.env.DEBUG });
 
 const db = require('./lib/model/db')
 
