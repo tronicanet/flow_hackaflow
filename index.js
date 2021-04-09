@@ -20,7 +20,6 @@ const corsService = require('./lib/service/cors');
 // Importo el endpoint token
 const apiRoutes = require('./lib/routes/apiRoutes');
 
-
 /* 
  * Aplicacion
  */
