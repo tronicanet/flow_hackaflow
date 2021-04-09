@@ -2,6 +2,14 @@
  * Imports
  */
 
+// Errores mas detallados en vscode
+process.on('warning', e => console.warn(e.stack));
+
+// Obtenemos la congfig
+require('dotenv').config({ debug: process.env.DEBUG });
+
+const db = require('./lib/model/db')
+
 // Importamos OS
 const os = require("os");
 
@@ -48,7 +56,7 @@ const api = '/api/v1';
 app.use(api, apiRoutes);
 
 // Creamos la ruta raiz
-app.get('/', (req, res) => { 
+app.get('/', (req, res) => {
 
   // Retornamos el mensaje
   res.send('API HackaFlow');
